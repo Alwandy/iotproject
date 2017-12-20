@@ -1,0 +1,20 @@
+﻿@model AIOTCA3.Entities.Post
+@{
+    ViewBag.Title = "Article name";
+}
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-md-12" style="margin: 5px;">
+            <h3>@Html.DisplayFor(model => model.Title)</h3>
+            <p class="text-justify">@Html.DisplayFor(model => model.Body)</p>
+            <p class="text-right"><i>Written by @Html.DisplayFor(model => model.Author) </i></p>
+        </div>
+        <div class="col-md-12" style="margin: 5px;">
+            <h3>Comments</h3>
+            <p><img src="http://via.placeholder.com/50x50"/> Julian Alwandy says</p>
+            <p>In euismod eleifend arcu eget semper. Aliquam sed metus eget dui faucibus luctus nec id urna.</p>
+        </div>
+        
+
+    </div>
+</div>

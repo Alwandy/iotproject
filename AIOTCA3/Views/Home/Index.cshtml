@@ -1,0 +1,23 @@
+﻿@using AIOTCA3.Extensions
+@model IEnumerable<AIOTCA3.Entities.Post>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+<div class="container">
+    <div class="row justify-content-md-center">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-12" style="margin: 5px;">
+            <h3>@Html.DisplayFor(modelItem => item.Title)</h3>
+            @{
+                string parameterValue = item.Body.ToString().Substring(0, 500); 
+            }
+            <p>@Html.DisplayFor(modelItem => parameterValue)</p>
+            @Html.ActionLink("Read More","Post", new { id=item.Id })
+        </div>
+    }
+</div>
+</div>
