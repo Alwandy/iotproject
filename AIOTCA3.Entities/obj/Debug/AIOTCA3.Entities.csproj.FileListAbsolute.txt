@@ -3,3 +3,4 @@ C:\Users\v-jualwa\source\repos\AIOTCA3\AIOTCA3.Entities\bin\Debug\AIOTCA3.Entiti
 C:\Users\v-jualwa\source\repos\AIOTCA3\AIOTCA3.Entities\obj\Debug\AIOTCA3.Entities.csproj.CoreCompileInputs.cache
 C:\Users\v-jualwa\source\repos\AIOTCA3\AIOTCA3.Entities\obj\Debug\AIOTCA3.Entities.dll
 C:\Users\v-jualwa\source\repos\AIOTCA3\AIOTCA3.Entities\obj\Debug\AIOTCA3.Entities.pdb
+C:\Users\v-jualwa\source\repos\AIOTCA3\AIOTCA3.Entities\obj\Debug\AIOTCA3.Entities.csprojResolveAssemblyReference.cache

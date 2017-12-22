@@ -15,5 +15,6 @@ namespace AIOTCA3.DataContexts
             
         }
 
+        public System.Data.Entity.DbSet<ApplicationUser> ApplicationUsers { get; set; }
     }
 }
