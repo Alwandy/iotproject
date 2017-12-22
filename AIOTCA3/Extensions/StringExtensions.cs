@@ -5,6 +5,8 @@ using System.Web;
 
 namespace AIOTCA3.Extensions
 {
+
+      // To allow string being cut to certain size. 
     public static class StringExtensions
     {
         public static string SubStringTo(this string thatString, int limit)

@@ -31,6 +31,7 @@ namespace AIOTCA3.Controllers
             return View();
         }
 
+        // To get Comments and Blog posts
         public ActionResult Post(int? id)
         {
             if (id == null)
@@ -51,6 +52,7 @@ namespace AIOTCA3.Controllers
             return View(viewmodel);
         }
 
+        //Submitting a comment. 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Post([Bind(Include = "Id,Poster,Date,Pid,CommentText")] Comment comment, int id)
@@ -63,7 +65,7 @@ namespace AIOTCA3.Controllers
                 return RedirectToAction("Post", id);
             }
 
-            return RedirectToAction("Index", id);
+            return RedirectToAction("Post", id);
         }
 
     }

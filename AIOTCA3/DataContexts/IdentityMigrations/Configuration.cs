@@ -9,7 +9,7 @@ namespace AIOTCA3.DataContexts.IdentityMigrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             MigrationsDirectory = @"DataContexts\IdentityMigrations";
         }
 
@@ -27,6 +27,7 @@ namespace AIOTCA3.DataContexts.IdentityMigrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
         }
     }
 }

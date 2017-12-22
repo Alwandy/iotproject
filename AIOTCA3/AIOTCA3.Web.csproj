@@ -190,9 +190,9 @@
     </Compile>
     <Compile Include="DataContexts\CommentsMigrations\Configuration.cs" />
     <Compile Include="DataContexts\IdentityDb.cs" />
-    <Compile Include="DataContexts\IdentityMigrations\201712221742537_InitialCreate.cs" />
-    <Compile Include="DataContexts\IdentityMigrations\201712221742537_InitialCreate.Designer.cs">
-      <DependentUpon>201712221742537_InitialCreate.cs</DependentUpon>
+    <Compile Include="DataContexts\IdentityMigrations\201712221813179_InitialCreate.cs" />
+    <Compile Include="DataContexts\IdentityMigrations\201712221813179_InitialCreate.Designer.cs">
+      <DependentUpon>201712221813179_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="DataContexts\IdentityMigrations\Configuration.cs" />
     <Compile Include="DataContexts\PostsDb.cs" />
@@ -219,7 +219,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Properties\PublishProfiles\AIOTCA3Web20171222060814 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\AIOTCA3Web20171222071953 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -284,8 +284,8 @@
     <EmbeddedResource Include="DataContexts\CommentsMigrations\201712221628558_Initial Create.resx">
       <DependentUpon>201712221628558_Initial Create.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DataContexts\IdentityMigrations\201712221742537_InitialCreate.resx">
-      <DependentUpon>201712221742537_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="DataContexts\IdentityMigrations\201712221813179_InitialCreate.resx">
+      <DependentUpon>201712221813179_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DataContexts\PostsMigrations\201712201821526_InitialCreate.resx">
       <DependentUpon>201712201821526_InitialCreate.cs</DependentUpon>
