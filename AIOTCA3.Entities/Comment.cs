@@ -26,13 +26,8 @@ namespace AIOTCA3.Entities
         [StringLength(200)]
         public string CommentText { get; set; }
 
-        
-        private DateTime? _date;
-        public DateTime Date
-        {
-            get => _date ?? DateTime.Now;
-            set => _date = value;
-        }
+      
+        public DateTime Date { get; set; } = DateTime.Now;
 
     }
 }
