@@ -1,0 +1,104 @@
+﻿@model IEnumerable<AIOTCA3.Entities.Post>
+@{
+    ViewBag.Title = "Dashboard";
+}
+
+
+
+
+
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="home-tab" style="color: black !important; " data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="profile-tab" style="color: black !important" ; data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+    </li>
+@if (User.IsInRole("Admin"))
+{
+    <li class="nav-item">
+        <a class="nav-link" id="posts-tab" style="color: black !important" ; data-toggle="tab" href="#posts" role="tab" aria-controls="posts" aria-selected="false">View Blog Posts</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="createposts-tab" style="color: black !important" ; data-toggle="tab" href="#createposts" role="tab" aria-controls="createposts" aria-selected="false">Create Blog Posts</a>
+    </li>
+}
+</ul>
+
+
+<div class="tab-content">
+    <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        Welcome to your dashboard.. This dashboard is WIP.
+        
+
+    </div>
+    <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        WORK IN PROGRESS
+    </div>
+@if (User.IsInRole("Admin"))
+{
+    <div class="tab-pane" id="posts" role="tabpanel" aria-labelledby="posts-tab">
+        <table class="table table-bordered">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Body)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Author)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Date)
+                </th>
+                <th></th>
+            </tr>
+            @foreach (var item in Model.OrderByDescending(i => i.Date))
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                    <td>
+                        @{
+                            string parameterValue = item.Body.ToString().Substring(0, 500);
+                        }
+                        @Html.DisplayFor(modelItem => parameterValue)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Author)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new {id = item.Id}, new {@class = "btn btn-primary"})
+                        @Html.ActionLink("Details", "Details", new {id = item.Id}, new {@class = "btn btn-primary"})
+                        @Html.ActionLink("Delete", "Delete", new {id = item.Id}, new {@class = "btn btn-primary"})
+                    </td>
+                </tr>
+
+
+            }
+        </table>
+
+    </div>
+
+
+    <div class="tab-pane" id="createposts" role="tabpanel" aria-labelledby="createposts-tab">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    </div>
+
+
+}
+</div>
+
+<script>
+    $(function () {
+        $('#myTab a:first').tab('show');
+    })
+</script>

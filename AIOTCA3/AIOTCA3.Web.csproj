@@ -190,9 +190,9 @@
     </Compile>
     <Compile Include="DataContexts\CommentsMigrations\Configuration.cs" />
     <Compile Include="DataContexts\IdentityDb.cs" />
-    <Compile Include="DataContexts\IdentityMigrations\201712201820383_InitialCreate.cs" />
-    <Compile Include="DataContexts\IdentityMigrations\201712201820383_InitialCreate.Designer.cs">
-      <DependentUpon>201712201820383_InitialCreate.cs</DependentUpon>
+    <Compile Include="DataContexts\IdentityMigrations\201712221742537_InitialCreate.cs" />
+    <Compile Include="DataContexts\IdentityMigrations\201712221742537_InitialCreate.Designer.cs">
+      <DependentUpon>201712221742537_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="DataContexts\IdentityMigrations\Configuration.cs" />
     <Compile Include="DataContexts\PostsDb.cs" />
@@ -219,6 +219,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\AIOTCA3Web20171222060814 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -280,21 +281,21 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AIOTCA3.Entities\AIOTCA3.Entities.csproj">
-      <Project>{b16364d0-4fa3-4492-a27d-f1d32055918e}</Project>
-      <Name>AIOTCA3.Entities</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="DataContexts\CommentsMigrations\201712221628558_Initial Create.resx">
       <DependentUpon>201712221628558_Initial Create.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DataContexts\IdentityMigrations\201712201820383_InitialCreate.resx">
-      <DependentUpon>201712201820383_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="DataContexts\IdentityMigrations\201712221742537_InitialCreate.resx">
+      <DependentUpon>201712221742537_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DataContexts\PostsMigrations\201712201821526_InitialCreate.resx">
       <DependentUpon>201712201821526_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AIOTCA3.Entities\AIOTCA3.Entities.csproj">
+      <Project>{b16364d0-4fa3-4492-a27d-f1d32055918e}</Project>
+      <Name>AIOTCA3.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

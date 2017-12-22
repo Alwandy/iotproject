@@ -1,4 +1,4 @@
-namespace AIOTCA3.DAtaContexts.CommentsMigrations
+namespace AIOTCA3.DataContexts.CommentsMigrations
 {
     using System;
     using System.Data.Entity;

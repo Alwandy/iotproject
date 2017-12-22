@@ -14,7 +14,9 @@ namespace AIOTCA3.DataContexts
         {
             
         }
-
-        public System.Data.Entity.DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public static IdentityDb Create()
+        {
+            return new IdentityDb();
+        }
     }
 }

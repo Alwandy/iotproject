@@ -1,0 +1,47 @@
+﻿@using System.Data.Entity
+@using AIOTCA3.Entities
+@using AIOTCA3.Models
+@model AIOTCA3.Models.PostViewModels
+@{
+    ViewBag.Title = @Html.DisplayFor(model => model.Post.Title);
+}
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-md-12" style="margin: 5px;">
+            <h3>@Html.DisplayFor(model => model.Post.Title)</h3>
+            <p class="text-justify">@Html.DisplayFor(model => model.Post.Body)</p>
+            <p class="text-right"><i>Written by @Html.DisplayFor(model => model.Post.Author) </i></p>
+        </div>
+        <div class="col-md-12" style="margin: 5px;">
+            <h3>Comments</h3>
+            @foreach (var item in Model.IComment.OrderByDescending(i => i.Date))
+            {
+                <p>
+                    <img src="http://via.placeholder.com/50x50" /> @Html.DisplayFor(modelItem => item.Poster) says
+                </p>
+                <p>@Html.DisplayFor(modelItem => item.CommentText)</p>
+            }
+
+        @if (User.Identity.IsAuthenticated)
+        {
+            using (Html.BeginForm())
+             {
+                 @Html.AntiForgeryToken()
+
+                 <div class="form-horizontal">
+                     <h4>Post comment</h4>
+                     <hr/>
+                     @Html.EditorFor(model => model.Comment.CommentText, new {htmlAttributes = new {@class = "form-control", rows = 5, @cols = 35}})
+                     <input type="submit" value="Submit comment"/>
+                 </div>
+             }
+        }
+        else
+        {
+            <h3><a href="/Account/Login">Login</a> to submit comment</h3>
+        }
+        </div>
+
+
+    </div>
+</div>

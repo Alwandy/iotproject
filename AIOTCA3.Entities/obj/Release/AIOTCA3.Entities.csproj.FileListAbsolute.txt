@@ -1,0 +1,6 @@
+C:\Users\v-jualwa\source\repos\AIOTCA3\AIOTCA3.Entities\bin\Release\AIOTCA3.Entities.dll
+C:\Users\v-jualwa\source\repos\AIOTCA3\AIOTCA3.Entities\bin\Release\AIOTCA3.Entities.pdb
+C:\Users\v-jualwa\source\repos\AIOTCA3\AIOTCA3.Entities\obj\Release\AIOTCA3.Entities.csprojResolveAssemblyReference.cache
+C:\Users\v-jualwa\source\repos\AIOTCA3\AIOTCA3.Entities\obj\Release\AIOTCA3.Entities.csproj.CoreCompileInputs.cache
+C:\Users\v-jualwa\source\repos\AIOTCA3\AIOTCA3.Entities\obj\Release\AIOTCA3.Entities.dll
+C:\Users\v-jualwa\source\repos\AIOTCA3\AIOTCA3.Entities\obj\Release\AIOTCA3.Entities.pdb
