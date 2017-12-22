@@ -19,6 +19,6 @@ namespace AIOTCA3.Entities
         [Required]
         public string Author { get; set; } = HttpContext.Current.User.Identity.Name;
 
-        public DateTime Date { get; set; }
+        public DateTime Date { get; set; } = DateTime.Now;
     }
 }
